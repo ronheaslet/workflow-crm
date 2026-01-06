@@ -1,0 +1,25 @@
+{
+  "id": "blue_collar",
+  "name": "Blue Collar Services",
+  "terminology": {
+    "contact": "Customer",
+    "contacts": "Customers",
+    "job": "Job",
+    "jobs": "Jobs",
+    "complete": "Job Complete"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": true,
+    "appointments": false,
+    "compliance": false
+  },
+  "job_types": ["service_call", "installation", "repair", "maintenance", "estimate"],
+  "pipeline_stages": ["lead", "quoted", "scheduled", "in_progress", "complete", "invoiced", "paid"],
+  "billing_types": ["labor", "parts", "materials", "equipment", "travel", "disposal"],
+  "voice_parsing": {
+    "time_keywords": ["hours", "hour", "minutes", "took"],
+    "part_keywords": ["replaced", "installed", "used", "part", "model"],
+    "followup_keywords": ["needs", "wants", "next", "schedule", "return"]
+  }
+}

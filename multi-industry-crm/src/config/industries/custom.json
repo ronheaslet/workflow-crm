@@ -1,0 +1,21 @@
+{
+  "id": "custom",
+  "name": "Custom Industry",
+  "terminology": {
+    "contact": "Contact",
+    "contacts": "Contacts",
+    "job": "Job",
+    "jobs": "Jobs",
+    "complete": "Complete"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false
+  },
+  "job_types": ["standard"],
+  "pipeline_stages": ["new", "in_progress", "complete"],
+  "billing_types": ["service", "product", "other"],
+  "custom_fields": {}
+}

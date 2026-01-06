@@ -1,0 +1,34 @@
+{
+  "id": "automotive",
+  "name": "Automotive Services",
+  "terminology": {
+    "contact": "Customer",
+    "contacts": "Customers",
+    "job": "Repair Order",
+    "jobs": "Repair Orders",
+    "complete": "Ready for Pickup"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": true,
+    "appointments": true,
+    "compliance": false,
+    "equipment_tracking": true
+  },
+  "job_types": ["maintenance", "repair", "diagnostic", "inspection", "bodywork", "detailing"],
+  "pipeline_stages": ["estimate", "approved", "in_progress", "waiting_parts", "quality_check", "ready", "picked_up", "paid"],
+  "billing_types": ["labor", "parts", "fluids", "shop_supplies", "sublet", "towing"],
+  "voice_parsing": {
+    "time_keywords": ["hours", "hour", "book_time", "actual_time"],
+    "part_keywords": ["replaced", "installed", "part", "oem", "aftermarket"],
+    "followup_keywords": ["needs", "recommend", "worn", "soon", "next_service"]
+  },
+  "custom_fields": {
+    "vehicle_year": "number",
+    "vehicle_make": "text",
+    "vehicle_model": "text",
+    "vin": "text",
+    "mileage": "number",
+    "license_plate": "text"
+  }
+}

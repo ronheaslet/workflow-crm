@@ -1,0 +1,28 @@
+{
+  "id": "events",
+  "name": "Events & Entertainment",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Event",
+    "jobs": "Events",
+    "complete": "Event Complete"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false,
+    "vendor_management": true
+  },
+  "job_types": ["wedding", "corporate", "birthday", "concert", "festival", "private_party"],
+  "pipeline_stages": ["inquiry", "consultation", "proposal", "booked", "planning", "final_details", "event_day", "wrap_up", "complete"],
+  "billing_types": ["deposit", "planning_fee", "day_of_coordination", "vendor_payments", "rentals", "final_balance"],
+  "custom_fields": {
+    "event_date": "date",
+    "venue": "text",
+    "guest_count": "number",
+    "budget": "number",
+    "event_type": "select"
+  }
+}

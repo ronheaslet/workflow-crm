@@ -1,0 +1,32 @@
+{
+  "id": "home_services",
+  "name": "Home Services",
+  "terminology": {
+    "contact": "Homeowner",
+    "contacts": "Homeowners",
+    "job": "Service Call",
+    "jobs": "Service Calls",
+    "complete": "Service Complete"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": true,
+    "appointments": true,
+    "compliance": false,
+    "equipment_tracking": true
+  },
+  "job_types": ["hvac", "plumbing", "electrical", "roofing", "landscaping", "cleaning", "pest_control"],
+  "pipeline_stages": ["lead", "quoted", "scheduled", "dispatched", "in_progress", "complete", "invoiced", "paid"],
+  "billing_types": ["labor", "parts", "materials", "equipment_rental", "travel", "emergency_fee"],
+  "voice_parsing": {
+    "time_keywords": ["hours", "hour", "minutes", "took", "spent"],
+    "part_keywords": ["replaced", "installed", "used", "part", "model", "unit"],
+    "followup_keywords": ["needs", "recommend", "should", "next", "schedule", "return"]
+  },
+  "custom_fields": {
+    "equipment_type": "select",
+    "model_number": "text",
+    "serial_number": "text",
+    "warranty_status": "select"
+  }
+}

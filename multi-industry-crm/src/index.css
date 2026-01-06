@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom theme colors */
+@theme {
+  --color-primary: #0096d0;
+  --color-secondary: #82c341;
+  --color-slate: #3f4444;
+  --color-ivory: #efede8;
+}

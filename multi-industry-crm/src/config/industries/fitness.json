@@ -1,0 +1,29 @@
+{
+  "id": "fitness",
+  "name": "Fitness & Training",
+  "terminology": {
+    "contact": "Member",
+    "contacts": "Members",
+    "job": "Session",
+    "jobs": "Sessions",
+    "complete": "Session Complete"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false,
+    "recurring_billing": true,
+    "membership_tracking": true
+  },
+  "job_types": ["personal_training", "group_class", "assessment", "nutrition_consult", "massage"],
+  "pipeline_stages": ["prospect", "trial", "active_member", "on_hold", "cancelled"],
+  "billing_types": ["membership", "personal_training", "class_pack", "day_pass", "merchandise"],
+  "custom_fields": {
+    "membership_type": "select",
+    "start_date": "date",
+    "contract_end": "date",
+    "sessions_remaining": "number",
+    "trainer_assigned": "text"
+  }
+}

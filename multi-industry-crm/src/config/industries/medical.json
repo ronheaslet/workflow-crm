@@ -1,0 +1,20 @@
+{
+  "id": "medical",
+  "name": "Medical Practice",
+  "terminology": {
+    "contact": "Patient",
+    "contacts": "Patients",
+    "job": "Appointment",
+    "jobs": "Appointments",
+    "complete": "Visit Complete"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true
+  },
+  "job_types": ["consultation", "followup", "procedure", "checkup"],
+  "pipeline_stages": ["scheduled", "checked_in", "in_progress", "complete", "billed"],
+  "compliance_requirements": ["hipaa", "consent_forms", "record_retention"]
+}

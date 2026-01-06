@@ -1,0 +1,29 @@
+{
+  "id": "pet_services",
+  "name": "Pet Services",
+  "terminology": {
+    "contact": "Pet Parent",
+    "contacts": "Pet Parents",
+    "job": "Appointment",
+    "jobs": "Appointments",
+    "complete": "Service Complete"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false,
+    "pet_profiles": true
+  },
+  "job_types": ["grooming", "boarding", "daycare", "training", "vet_visit", "walking"],
+  "pipeline_stages": ["booked", "checked_in", "in_progress", "complete", "picked_up", "paid"],
+  "billing_types": ["service", "add_ons", "retail", "tips", "boarding_nights"],
+  "custom_fields": {
+    "pet_name": "text",
+    "pet_type": "select",
+    "breed": "text",
+    "weight": "number",
+    "vaccination_status": "select",
+    "special_instructions": "textarea"
+  }
+}

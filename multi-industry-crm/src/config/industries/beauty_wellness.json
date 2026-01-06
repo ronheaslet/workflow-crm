@@ -1,0 +1,19 @@
+{
+  "id": "beauty_wellness",
+  "name": "Beauty & Wellness",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Appointment",
+    "jobs": "Appointments",
+    "complete": "Service Complete"
+  },
+  "features": {
+    "inventory": true,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false
+  },
+  "job_types": ["haircut", "color", "massage", "facial", "nails", "consultation"],
+  "pipeline_stages": ["booked", "confirmed", "checked_in", "in_progress", "complete", "paid"]
+}

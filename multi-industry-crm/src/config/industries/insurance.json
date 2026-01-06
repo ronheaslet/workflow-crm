@@ -1,0 +1,28 @@
+{
+  "id": "insurance",
+  "name": "Insurance Agency",
+  "terminology": {
+    "contact": "Policyholder",
+    "contacts": "Policyholders",
+    "job": "Policy",
+    "jobs": "Policies",
+    "complete": "Policy Bound"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true,
+    "recurring_billing": true
+  },
+  "job_types": ["auto", "home", "life", "health", "commercial", "umbrella"],
+  "pipeline_stages": ["prospect", "quoted", "submitted", "underwriting", "approved", "bound", "renewal"],
+  "compliance_requirements": ["state_licensing", "e_and_o", "continuing_education"],
+  "custom_fields": {
+    "policy_number": "text",
+    "premium": "number",
+    "effective_date": "date",
+    "expiration_date": "date",
+    "carrier": "text"
+  }
+}

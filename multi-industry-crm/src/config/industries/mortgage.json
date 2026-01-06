@@ -1,0 +1,28 @@
+{
+  "id": "mortgage",
+  "name": "Mortgage & Lending",
+  "terminology": {
+    "contact": "Borrower",
+    "contacts": "Borrowers",
+    "job": "Loan",
+    "jobs": "Loans",
+    "complete": "Loan Closed"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true,
+    "document_tracking": true
+  },
+  "job_types": ["purchase", "refinance", "heloc", "reverse", "construction"],
+  "pipeline_stages": ["lead", "pre_qualified", "application", "processing", "underwriting", "conditional", "clear_to_close", "closed", "funded"],
+  "compliance_requirements": ["trid", "respa", "ecoa", "hmda"],
+  "custom_fields": {
+    "loan_amount": "number",
+    "property_address": "text",
+    "loan_type": "select",
+    "interest_rate": "number",
+    "lock_expiration": "date"
+  }
+}

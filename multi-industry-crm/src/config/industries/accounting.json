@@ -1,0 +1,29 @@
+{
+  "id": "accounting",
+  "name": "Accounting & Tax",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Engagement",
+    "jobs": "Engagements",
+    "complete": "Filed/Completed"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true,
+    "recurring_billing": true,
+    "document_tracking": true
+  },
+  "job_types": ["tax_return", "bookkeeping", "audit", "consulting", "payroll", "entity_formation"],
+  "pipeline_stages": ["prospect", "engaged", "documents_requested", "in_progress", "review", "filed", "completed"],
+  "compliance_requirements": ["cpa_license", "continuing_education", "data_security"],
+  "custom_fields": {
+    "tax_year": "number",
+    "entity_type": "select",
+    "filing_deadline": "date",
+    "extension_filed": "boolean",
+    "efile_status": "select"
+  }
+}

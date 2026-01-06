@@ -1,0 +1,29 @@
+{
+  "id": "professional_services",
+  "name": "Professional Services",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Project",
+    "jobs": "Projects",
+    "complete": "Project Complete"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": false,
+    "time_tracking": true,
+    "project_management": true
+  },
+  "job_types": ["consulting", "implementation", "strategy", "training", "audit", "support"],
+  "pipeline_stages": ["lead", "discovery", "proposal", "negotiation", "active", "on_hold", "complete"],
+  "billing_types": ["hourly", "fixed_fee", "retainer", "milestone", "expenses"],
+  "custom_fields": {
+    "project_code": "text",
+    "contract_value": "number",
+    "start_date": "date",
+    "end_date": "date",
+    "project_manager": "text"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "legal",
+  "name": "Legal Practice",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Matter",
+    "jobs": "Matters",
+    "complete": "Matter Closed"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true,
+    "time_tracking": true
+  },
+  "job_types": ["litigation", "transactional", "consultation", "estate_planning", "family", "criminal"],
+  "pipeline_stages": ["intake", "conflict_check", "engaged", "active", "pending_resolution", "closed"],
+  "compliance_requirements": ["bar_rules", "trust_accounting", "conflict_checks", "confidentiality"],
+  "billing_types": ["hourly", "flat_fee", "contingency", "retainer"],
+  "custom_fields": {
+    "matter_number": "text",
+    "practice_area": "select",
+    "opposing_counsel": "text",
+    "court_case_number": "text",
+    "statute_of_limitations": "date"
+  }
+}

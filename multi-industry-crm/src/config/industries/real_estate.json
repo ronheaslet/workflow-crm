@@ -1,0 +1,28 @@
+{
+  "id": "real_estate",
+  "name": "Real Estate",
+  "terminology": {
+    "contact": "Client",
+    "contacts": "Clients",
+    "job": "Transaction",
+    "jobs": "Transactions",
+    "complete": "Closed"
+  },
+  "features": {
+    "inventory": false,
+    "voice_workflow": false,
+    "appointments": true,
+    "compliance": true,
+    "document_tracking": true
+  },
+  "job_types": ["buyer", "seller", "dual_agent", "referral", "rental"],
+  "pipeline_stages": ["lead", "active", "under_contract", "pending", "closed", "post_closing"],
+  "compliance_requirements": ["fair_housing", "agency_disclosure", "wire_fraud_prevention"],
+  "custom_fields": {
+    "property_address": "text",
+    "list_price": "number",
+    "sale_price": "number",
+    "closing_date": "date",
+    "commission_rate": "number"
+  }
+}
