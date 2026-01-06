@@ -28,14 +28,66 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
       setLoading(false);
+
+      // Auto-create tenant for new signups
+      if (event === 'SIGNED_IN' && session?.user) {
+        await ensureUserHasTenant(session.user);
+      }
     });
 
     return () => subscription.unsubscribe();
   }, []);
+
+  const ensureUserHasTenant = async (user: User) => {
+    // Check if user already has a tenant
+    const { data: existingMembership } = await supabase
+      .from('tenant_users')
+      .select('tenant_id')
+      .eq('user_id', user.id)
+      .limit(1)
+      .single();
+
+    if (existingMembership) {
+      return; // User already has a tenant
+    }
+
+    // Create a new tenant for the user
+    const emailPrefix = user.email?.split('@')[0] || 'user';
+    const slug = `${emailPrefix}-${Date.now()}`.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+
+    const { data: newTenant, error: tenantError } = await supabase
+      .from('tenants')
+      .insert({
+        name: `${emailPrefix}'s Business`,
+        slug: slug,
+        industry: 'blue_collar',
+        subscription_tier: 'starter'
+      })
+      .select()
+      .single();
+
+    if (tenantError) {
+      console.error('Failed to create tenant:', tenantError);
+      return;
+    }
+
+    // Link user to tenant as owner
+    const { error: linkError } = await supabase
+      .from('tenant_users')
+      .insert({
+        tenant_id: newTenant.id,
+        user_id: user.id,
+        role: 'owner'
+      });
+
+    if (linkError) {
+      console.error('Failed to link user to tenant:', linkError);
+    }
+  };
 
   const signIn = async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -43,7 +95,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signUp({ email, password });
+    const { data, error } = await supabase.auth.signUp({ email, password });
+
+    // If signup successful and user confirmed (no email confirmation required)
+    if (!error && data.user && data.session) {
+      await ensureUserHasTenant(data.user);
+    }
+
     return { error };
   };
 
